@@ -27,5 +27,7 @@
 <dt>Review the process model</dt> 
 <dd>It's a bit clunky. When the script internals settle down should see if there's a more appropriate way to split up the work</dd> 
 <dt>Cleanly handle API limits</dt> 
-<dd>Code for the maximum number of changes per call (1000) and maximum amount of record data (32000B) per call</dd> 
+<dd>Code for the maximum number of changes per call (1000) and maximum amount of record data (32000B) per call</dd>
+<dt>Time everything</dt>
+<dd>Metrics, metrics, metrics</dd>
 </dl>
