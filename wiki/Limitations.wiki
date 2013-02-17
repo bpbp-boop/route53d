@@ -1,0 +1,18 @@
+#summary Route 53 API limitations that are relevant for `route53d` users.
+
+*DRAFT - Work In Progress*
+
+= Introduction =
+
+The `route53d` program must work within the limitations imposed by the DNS protocol and by the Amazon AWS Route 53 API. It is possible that legitimate DNS operations cannot safely be reflected in valid requests to Route 53 and `route53d` is unable to proceed. This document describes the limitations that `route53d` operates with. You must ensure that your DNS environment does not produce operations that cannot be represented to Route 53.
+
+== Route 53 API Limits ==
+
+Two keys limits of the Route 53 API must be respected by all Route 53 clients, including `route53d`. One API request to update DNS records:
+
+  # ... can change no more than one hundred records, and
+  # ... can have no more than thirty two kilobytes of record data
+
+= Dynamic Updates =
+
+= Zone Transfer (AXFR/IXFR) =
